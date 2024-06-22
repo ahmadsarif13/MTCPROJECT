@@ -73,4 +73,11 @@ class HomeController extends Controller
 
         return redirect('/riwayat');
     }
+
+    public function cetak($id){
+        return view('riwayat.cetak', [
+            'title' => 'Cetak Perbaikan',
+            'data' => RequestPerbaikan::find($id)
+        ]);
+    }
 }

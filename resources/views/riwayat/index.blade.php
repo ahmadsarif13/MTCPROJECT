@@ -39,7 +39,7 @@
                                                 @can('admin')
                                                     <a href="{{ url('/edit') }}/{{ $item->id }}" class="btn btn-warning">Edit status</a>
                                                 @endcan
-                                                <button class="btn btn-success">Cetak</button>
+                                                <a href="/cetak/{{ $item->id }}" class="btn btn-success">Cetak</a>
                                             </td>
                                         </tr>
                                     @empty

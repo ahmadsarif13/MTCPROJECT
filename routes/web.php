@@ -17,3 +17,4 @@ Route::get('/perbaikan', [HomeController::class, 'perbaikan'])->middleware('auth
 Route::get('/edit/{id}', [HomeController::class, 'editRequest'])->middleware('auth');
 Route::post('/pengajuan/{id}', [HomeController::class, 'updatePerbaikan'])->middleware('auth');
 Route::post('/pengajuan', [HomeController::class, 'storeRequest'])->middleware('auth');
+Route::get('/cetak/{id}', [HomeController::class, 'cetak'])->middleware('auth');
