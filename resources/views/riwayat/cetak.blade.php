@@ -13,19 +13,28 @@
         <thead>
             <tr>
                 <th colspan="3">
-                    <p>MTC PROJECT
+                    <p>Maintenance Request
                     </p>
                     <hr size="2px" color="black" />
                 </th>
             </tr>
             <tr>
-                <th colspan="3" style="text-align: right">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <td colspan="3" style="text-align: left">
                     Tgl : {{ date('d/m/Y', strtotime($data->updated_at)) }}
-                </th>
+                </td>
             </tr>
             <tr>
-                <th colspan="3" style="text-align: left">Kode #{{ $data->id }}</th>
+                <td colspan="3" style="text-align: left">
+                    Nama : {{ $data->employee->nama_karyawan }}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: left">
+                    Bagian : {{ $data->employee->departement }}
+                </td>
+            </tr>
+            <tr>
+                <th colspan="3" style="text-align: right">Kode #{{ $data->id }}</th>
             </tr>
             <tr>
                 <th colspan="3">
