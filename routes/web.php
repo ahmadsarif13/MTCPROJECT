@@ -18,3 +18,4 @@ Route::get('/edit/{id}', [HomeController::class, 'editRequest'])->middleware('au
 Route::post('/pengajuan/{id}', [HomeController::class, 'updatePerbaikan'])->middleware('auth');
 Route::post('/pengajuan', [HomeController::class, 'storeRequest'])->middleware('auth');
 Route::get('/cetak/{id}', [HomeController::class, 'cetak'])->middleware('auth');
+Route::delete('/riwayat/{id}', [HomeController::class, 'destroy'])->middleware('auth')->name('riwayat.destroy');

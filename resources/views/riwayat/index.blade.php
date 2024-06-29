@@ -40,6 +40,12 @@
                                                     <a href="{{ url('/edit') }}/{{ $item->id }}" class="btn btn-warning">Edit status</a>
                                                 @endcan
                                                 <a href="/cetak/{{ $item->id }}" class="btn btn-success">Cetak</a>
+                                                <!-- Form Hapus -->
+                                                <form action="{{ route('riwayat.destroy', $item->id) }}" method="POST" style="display:inline;">
+                                                 @csrf
+                                                  @method('DELETE')
+                                                 <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus permintaan ini?')">Hapus</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @empty

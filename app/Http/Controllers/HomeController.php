@@ -80,4 +80,16 @@ class HomeController extends Controller
             'data' => RequestPerbaikan::find($id)
         ]);
     }
+
+    public function destroy($id){
+        $riwayat = RequestPerbaikan::find($id);
+    
+        if($riwayat){
+            $riwayat->delete();
+            return redirect('/riwayat')->with('success', 'Permintaan perbaikan berhasil dihapus');
+        } else {
+            return redirect('/riwayat')->with('error', 'Permintaan perbaikan tidak ditemukan');
+        }
+    }
+    
 }
